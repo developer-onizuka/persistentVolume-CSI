@@ -102,6 +102,7 @@ ubuntu-csi-58dcbc877f-tckf2 Tue Mar 15 15:25:44 UTC 2022
 
 # 6. Can Ubuntu-csi2 simultaneously mount the filesystem which is already mounted by Ubuntu-csi?
 ```
+$ kubectl apply -f ubuntu-csi2.yaml
 $ kubectl get pods -o wide
 NAME                               READY   STATUS    RESTARTS      AGE     IP              NODE      NOMINATED NODE   READINESS GATES
 ubuntu-csi-58dcbc877f-tckf2        2/2     Running   0             4m58s   10.10.235.142   worker1   <none>           <none>
