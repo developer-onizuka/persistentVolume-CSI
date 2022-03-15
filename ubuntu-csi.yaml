@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-csi
+spec:
+  selector:
+    matchLabels:
+      app: ubuntu-csi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ubuntu-csi
+    spec:
+      containers:
+      - name: ubuntu
+        image: ubuntu:20.04
+        command:
+          - sleep
+          - infinity
+        volumeMounts:
+        - name: ubuntu-csi-data
+          mountPath: /mnt
+      volumes:
+        - name: ubuntu-csi-data
+          persistentVolumeClaim:
+           claimName: pvc-nfs-vm-dynamic
