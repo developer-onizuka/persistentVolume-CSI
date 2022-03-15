@@ -93,6 +93,7 @@ ubuntu-csi-58dcbc877f-tckf2        2/2     Running   0             52s
 $ kubectl exec -i ubuntu-csi-58dcbc877f-tckf2 -- bash <<EOC
 echo \$HOSTNAME \$(date) >> /mnt/ubuntu_in_persistent_volume.txt
 EOC
+
 $ kubectl exec -i ubuntu-csi-58dcbc877f-tckf2 -- bash <<EOC
 cat /mnt/ubuntu_in_persistent_volume.txt
 EOC
