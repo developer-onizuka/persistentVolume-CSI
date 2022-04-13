@@ -44,8 +44,8 @@ $ kubectl create -f pvc-nfs-vm-csi-dynamic.yaml
 ```
 ```
 $ kubectl get sc
-NAME         PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-nfs-vm-csi   nfs.csi.k8s.io   Delete          Immediate           false                  9s
+NAME                   PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-vm-csi (default)   nfs.csi.k8s.io   Delete          Immediate           false                  12h
 
 $ kubectl get pvc
 NAME                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
