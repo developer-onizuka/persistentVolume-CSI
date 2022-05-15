@@ -15,7 +15,7 @@ $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/s
 && chmod 700 get_helm.sh \
 && ./get_helm.sh
 $ helm repo add csi-driver-nfs https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts
-$ helm install csi-driver-nfs csi-driver-nfs/csi-driver-nfs --namespace kube-system --version v3.2.0
+$ helm install csi-driver-nfs csi-driver-nfs/csi-driver-nfs --namespace kube-system --version v4.0.0
 ```
 ```
 $ kubectl get pods -n kube-system |grep csi
